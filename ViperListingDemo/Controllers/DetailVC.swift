@@ -16,12 +16,27 @@ class DetailVC: UIViewController {
     @IBOutlet weak var lblCountryCode: UILabel!
     @IBOutlet weak var lblWebPage: UILabel!
     
+    @IBOutlet weak var viewRefresh: UIView!
+    @IBOutlet weak var btnRefresh: UIButton!
+    
     var universities : University?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.btnRefresh.setTitle("", for: .normal)
+        self.btnRefresh.titleLabel?.text = ""
+        
+        self.viewRefresh.layer.cornerRadius =
+        self.viewRefresh.frame.size.height/2
+        
         self.setupData()
     }
+    
+    @IBAction func onClicKRefresh(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
     func setupData() {
         

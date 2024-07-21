@@ -7,6 +7,7 @@
 
 import Foundation
 import RealmSwift
+import ProgressHUD
 
 protocol UniversityInteractorInputProtocol: AnyObject {
     func fetchUniversities()
@@ -26,6 +27,7 @@ class UniversityInteractor: UniversityInteractorInputProtocol {
         
         if networkManager.isConnected {
             
+            Progre
             var request = URLRequest(url: URL(string:"http://universities.hipolabs.com/search?country=United%20Arab%20Emirates")!)
             request.httpMethod = "GET"
             

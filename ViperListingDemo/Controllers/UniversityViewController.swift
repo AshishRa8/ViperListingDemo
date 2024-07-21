@@ -18,6 +18,11 @@ class UniversityViewController: UIViewController, UniversityViewProtocol {
         super.viewDidLoad()
         self.title = "University List"
         setupTableView()
+//        presenter?.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         presenter?.viewDidLoad()
     }
     

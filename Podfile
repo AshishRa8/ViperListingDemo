@@ -6,7 +6,7 @@ target 'ViperListingDemo' do
   use_frameworks!
 
 	pod 'RealmSwift'
-
+  pod 'ProgressHUD'
   # Pods for ViperListingDemo
 
   target 'ViperListingDemoTests' do
