@@ -26,8 +26,7 @@ class UniversityInteractor: UniversityInteractorInputProtocol {
     func fetchUniversities() {
         
         if networkManager.isConnected {
-            
-            Progre
+        
             var request = URLRequest(url: URL(string:"http://universities.hipolabs.com/search?country=United%20Arab%20Emirates")!)
             request.httpMethod = "GET"
             
