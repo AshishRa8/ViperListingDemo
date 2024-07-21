@@ -49,10 +49,6 @@ class UniversityInteractor: UniversityInteractorInputProtocol {
                 }
                 
                 do {
-                    
-                    //                    let array = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]]
-                    //                    print(array)
-                    
                     let universities = try JSONDecoder().decode([University].self, from: data)
                     self.presenter?.universitiesFetchedSuccessfully(universities: universities)
                     self.saveUniversity(from: universities)
